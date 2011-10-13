@@ -6,10 +6,10 @@ var server = http.createServer (
     // header return
     res.writeHead (200, {'content-type': 'text/plain'});
 
-    res.write ("Hello")
+    res.write ("Hello\n");
     setTimeout (function () {
-      res.write ("world"
-    )}, 2000);
+      res.end ("world!\n");
+    }, 2000);
   }
 );
 
